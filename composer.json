@@ -1,6 +1,6 @@
 {
     "name":        "netcommons/public-space",
-    "description": "Public Space Auth Plugin for CakePHP",
+    "description": "Public Space Plugin for CakePHP",
     "type":        "cakephp-plugin",
     "keywords":    ["cakephp", "public", "space"],
     "homepage":    "http://www.netcommons.org/",
