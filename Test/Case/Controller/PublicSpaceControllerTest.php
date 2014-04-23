@@ -22,7 +22,7 @@ class PublicSpaceControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		//'plugin.public_space.public_space'
+		'plugin.public_space.page'
 	);
 
 /**
@@ -31,8 +31,13 @@ class PublicSpaceControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
-		$this->autoRender = false; 
+		$pagesController = $this->generate('Pages.Pages');
+		$pagesController->response = $this->getMock('CakeResponse');
+		$pagesController->response
+			->expects($this->any())
+			->method('send')
+			->will($this->returnValue(true));
+
 		$result = $this->testAction('/public_space/index');
-		$this->assertTrue(true);
 	}
 }
