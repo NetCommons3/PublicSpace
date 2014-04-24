@@ -38,6 +38,8 @@ class PublicSpaceControllerTest extends ControllerTestCase {
 			->method('send')
 			->will($this->returnValue(true));
 
+		$siteSetting = $this->getMockForModel('SiteSetting');
+
 		$result = $this->testAction('/public_space/index');
 	}
 }
