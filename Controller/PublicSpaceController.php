@@ -1,5 +1,4 @@
 <?php
-App::uses('PublicSpaceAppController', 'PublicSpace.Controller');
 /**
  * PublicSpace Controller
  *
@@ -9,8 +8,10 @@ App::uses('PublicSpaceAppController', 'PublicSpace.Controller');
  * @link http://www.netcommons.org NetCommons Project
  * @license http://www.netcommons.org/license.txt NetCommons License
  */
-class PublicSpaceController extends PublicSpaceAppController {
 
+App::uses('PublicSpaceAppController', 'PublicSpace.Controller');
+
+class PublicSpaceController extends PublicSpaceAppController {
 
 /**
  * index method
@@ -20,8 +21,8 @@ class PublicSpaceController extends PublicSpaceAppController {
 	public function index() {
 		$paths = func_get_args();
 		$path = implode('/', $paths);
-		$url = 'pages/pages/index/public_space/' . $path;
-	
+		$url = 'pages/public_space/' . $path;
+
 		$this->autoRender = false;
 		echo $this->requestAction($url, array('return'));
 	}

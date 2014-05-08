@@ -17,29 +17,22 @@ App::uses('PublicSpaceController', 'PublicSpace.Controller');
 class PublicSpaceControllerTest extends ControllerTestCase {
 
 /**
- * Fixtures
- *
- * @var array
- */
-	public $fixtures = array(
-		'plugin.public_space.page'
-	);
-
-/**
  * testIndex method
  *
  * @return void
  */
 	public function testIndex() {
-		$pagesController = $this->generate('Pages.Pages');
-		$pagesController->response = $this->getMock('CakeResponse');
-		$pagesController->response
-			->expects($this->any())
-			->method('send')
+		$pagesController = $this->generate('Pages.Pages',
+			array(
+				'methods' => 'index',
+				'models' => 'SiteSetting'
+			)
+		);
+		$pagesController
+			->expects($this->once())
+			->method('index')
 			->will($this->returnValue(true));
 
-		$siteSetting = $this->getMockForModel('SiteSetting');
-
-		$result = $this->testAction('/public_space/index');
+		$this->testAction('/public_space');
 	}
 }
