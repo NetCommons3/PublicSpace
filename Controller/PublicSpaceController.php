@@ -21,9 +21,7 @@ class PublicSpaceController extends PublicSpaceAppController {
 	public function index() {
 		$paths = func_get_args();
 		$path = implode('/', $paths);
-		$url = 'pages/public_space/' . $path;
 
-		$this->autoRender = false;
-		echo $this->requestAction($url, array('return'));
+		$this->set('path', $path);
 	}
 }
