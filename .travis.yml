@@ -13,6 +13,8 @@ before_script:
   - git clone git://github.com/NetCommons3/NetCommons3 $NETCOMMONS_BUILD_DIR
   - cd $NETCOMMONS_BUILD_DIR
   - git checkout $NETCOMMONS_VERSION
+  - echo "Configure::write('Security.salt', 'ForTravis');" >> ./app/Config/core.php
+  - echo "Configure::write('Security.cipherSeed', '999');" >> ./app/Config/core.php
   - . tools/build/plugins/cakephp/travis/pre.sh
 
 script:
