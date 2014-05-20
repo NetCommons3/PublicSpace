@@ -10,4 +10,5 @@
  */
 ?>
 
-<?php echo $this->requestAction('pages/pages/index' . $path, array('return'));
+<?php 
+	echo $this->requestAction('pages/pages/index' . $path, array('return'));

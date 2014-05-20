@@ -9,5 +9,4 @@
  * @license http://www.netcommons.org/license.txt NetCommons License
  */
 
-Router::connect('/', array('controller' => 'public_space', 'action' => 'index', 'plugin' => 'public_space'));
 Router::connect('/public_space/*', array('controller' => 'public_space', 'action' => 'index', 'plugin' => 'public_space'));

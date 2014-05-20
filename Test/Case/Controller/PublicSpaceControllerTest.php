@@ -9,12 +9,28 @@
  * @license http://www.netcommons.org/license.txt NetCommons License
  */
 
-App::uses('PublicSpaceController', 'PublicSpace.Controller');
-
 /**
  * Summary for PublicSpaceController Test Case
  */
 class PublicSpaceControllerTest extends ControllerTestCase {
+
+/**
+ * Fixtures
+ *
+ * @var array
+ */
+	public $fixtures = array(
+		'app.SiteSetting',
+		'app.SiteSettingValue',
+		'plugin.PublicSpace.Room',
+		'plugin.PublicSpace.Page',
+		'plugin.PublicSpace.Box',
+		'plugin.PublicSpace.BoxesPage',
+		'plugin.PublicSpace.Container',
+		'plugin.PublicSpace.ContainersPage',
+		'plugin.PublicSpace.Language',
+		'plugin.PublicSpace.LanguagesPage',
+	);
 
 /**
  * testIndex method
@@ -22,17 +38,8 @@ class PublicSpaceControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
-		$pagesController = $this->generate('Pages.Pages',
-			array(
-				'methods' => 'index',
-				'models' => 'SiteSetting'
-			)
-		);
-		$pagesController
-			->expects($this->once())
-			->method('index')
-			->will($this->returnValue(true));
-
-		$this->testAction('/public_space');
+		$this->testAction('/public_space', array('return' => 'view'));
+		$this->assertTextContains('<header id="container-header">', $this->view);
 	}
+
 }
