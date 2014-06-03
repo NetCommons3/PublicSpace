@@ -11,6 +11,11 @@
             "homepage": "https://github.com/NetCommons3/PublicSpace/graphs/contributors"
         }
     ],
+    "extra": {
+        "installer-paths": {
+            "app/Plugin/{$name}": ["type:cakephp-plugin"]
+        }
+    },
     "require": {
         "cakephp/cakephp":        "~2.4",
         "cakephp/debug_kit":      "~2.2",
@@ -26,7 +31,7 @@
         "netcommons/boxes":       "dev-master",
         "netcommons/frames":      "dev-master",
         "satooshi/php-coveralls": "dev-master",
-        "mustangostang/spyc": "dev-master"
+        "mustangostang/spyc":     "dev-master"
     },
     "config": {
         "vendor-dir": "vendors"
