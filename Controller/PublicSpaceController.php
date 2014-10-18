@@ -11,6 +11,12 @@
 
 App::uses('PublicSpaceAppController', 'PublicSpace.Controller');
 
+/**
+ * PublicSpace Controller
+ *
+ * @author Kohei Teraguchi <kteraguchi@netcommons.org>
+ * @package NetCommons\PublicSpace\Controller
+ */
 class PublicSpaceController extends PublicSpaceAppController {
 
 /**

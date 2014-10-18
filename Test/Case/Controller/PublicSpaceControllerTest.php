@@ -20,16 +20,19 @@ class PublicSpaceControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.SiteSetting',
-		'app.SiteSettingValue',
-		'plugin.PublicSpace.Room',
-		'plugin.PublicSpace.Page',
-		'plugin.PublicSpace.Box',
-		'plugin.PublicSpace.BoxesPage',
-		'plugin.PublicSpace.Container',
-		'plugin.PublicSpace.ContainersPage',
-		'plugin.PublicSpace.Language',
-		'plugin.PublicSpace.LanguagesPage',
+		'app.site_setting',
+		'plugin.pages.room',
+		'plugin.pages.page',
+		'plugin.pages.container',
+		'plugin.pages.containers_page',
+		'plugin.pages.languages_page',
+		'plugin.pages.language',
+		'plugin.pages.box',
+		'plugin.pages.boxes_page',
+		'plugin.pages.frame',
+		'plugin.pages.plugin',
+		'plugin.pages.plugins_room',
+		'plugin.pages.block',
 	);
 
 /**
@@ -38,7 +41,7 @@ class PublicSpaceControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
-		$this->testAction('/public_space', array('return' => 'view'));
+		$this->testAction('/public_space/public_space/index', array('return' => 'view'));
 		$this->assertTextContains('<header id="container-header">', $this->view);
 	}
 
