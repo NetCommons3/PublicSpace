@@ -20,7 +20,7 @@ class PublicSpaceControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
-		'app.site_setting',
+		'plugin.net_commons.site_setting',
 		'plugin.pages.room',
 		'plugin.pages.page',
 		'plugin.pages.container',
