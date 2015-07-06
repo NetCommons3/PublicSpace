@@ -9,10 +9,12 @@
  * @license http://www.netcommons.org/license.txt NetCommons License
  */
 
+App::uses('YAControllerTestCase', 'NetCommons.TestSuite');
+
 /**
  * Summary for PublicSpaceController Test Case
  */
-class PublicSpaceControllerTest extends ControllerTestCase {
+class PublicSpaceControllerTest extends YAControllerTestCase {
 
 /**
  * Fixtures
@@ -20,19 +22,24 @@ class PublicSpaceControllerTest extends ControllerTestCase {
  * @var array
  */
 	public $fixtures = array(
+		'plugin.blocks.block',
+		'plugin.blocks.block_role_permission',
+		'plugin.boxes.box',
+		'plugin.boxes.boxes_page',
+		'plugin.containers.container',
+		'plugin.containers.containers_page',
+		'plugin.frames.frame',
+		'plugin.m17n.languages_page',
+		'plugin.m17n.language',
 		'plugin.net_commons.site_setting',
-		'plugin.pages.room',
 		'plugin.pages.page',
-		'plugin.pages.container',
-		'plugin.pages.containers_page',
-		'plugin.pages.languages_page',
-		'plugin.pages.language',
-		'plugin.pages.box',
-		'plugin.pages.boxes_page',
-		'plugin.pages.frame',
-		'plugin.pages.plugin',
-		'plugin.pages.plugins_room',
-		'plugin.pages.block',
+		'plugin.plugin_manager.plugin',
+		'plugin.plugin_manager.plugins_room',
+		'plugin.roles.default_role_permission',
+		'plugin.rooms.roles_rooms_user',
+		'plugin.rooms.room',
+		'plugin.rooms.room_role_permission',
+		'plugin.users.user',
 	);
 
 /**
@@ -41,8 +48,11 @@ class PublicSpaceControllerTest extends ControllerTestCase {
  * @return void
  */
 	public function testIndex() {
+		YACakeTestCase::loadTestPlugin($this, 'NetCommons', 'TestPlugin');
+
 		$this->testAction('/public_space/public_space/index', array('return' => 'view'));
-		$this->assertTextContains('<header id="container-header">', $this->view);
+
+		$this->assertTextContains('<div class="box-site">', $this->view);
 	}
 
 }
