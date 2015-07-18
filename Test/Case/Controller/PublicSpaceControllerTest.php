@@ -48,6 +48,7 @@ class PublicSpaceControllerTest extends YAControllerTestCase {
  * @return void
  */
 	public function testIndex() {
+		Configure::write('Config.language', 'ja');
 		YACakeTestCase::loadTestPlugin($this, 'NetCommons', 'TestPlugin');
 
 		$this->testAction('/public_space/public_space/index', array('return' => 'view'));
