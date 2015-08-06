@@ -35,4 +35,11 @@ class PublicSpace extends Space {
  */
 	public $defaultParticipation = true;
 
+/**
+ * DefaultParticipationFixed
+ *
+ * @var bool
+ */
+	public $defaultParticipationFixed = true;
+
 }
