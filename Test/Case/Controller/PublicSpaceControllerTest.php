@@ -21,26 +21,7 @@ class PublicSpaceControllerTest extends YAControllerTestCase {
  *
  * @var array
  */
-	public $fixtures = array(
-		'plugin.blocks.block',
-		'plugin.blocks.block_role_permission',
-		'plugin.boxes.box',
-		'plugin.boxes.boxes_page',
-		'plugin.containers.container',
-		'plugin.containers.containers_page',
-		'plugin.frames.frame',
-		'plugin.m17n.languages_page',
-		'plugin.m17n.language',
-		'plugin.net_commons.site_setting',
-		'plugin.pages.page',
-		'plugin.plugin_manager.plugin',
-		'plugin.plugin_manager.plugins_room',
-		'plugin.roles.default_role_permission',
-		'plugin.rooms.roles_rooms_user',
-		'plugin.rooms.room',
-		'plugin.rooms.room_role_permission',
-		'plugin.users.user',
-	);
+	public $fixtures = array();
 
 /**
  * testIndex method
