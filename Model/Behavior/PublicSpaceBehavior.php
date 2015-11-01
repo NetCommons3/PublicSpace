@@ -15,7 +15,7 @@ App::uses('ModelBehavior', 'Model');
  * PublicSpace Behavior
  *
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package NetCommons\PrivateSpace\Model\Behavior
+ * @package NetCommons\PublicSpace\Model\Behavior
  */
 class PublicSpaceBehavior extends ModelBehavior {
 
