@@ -50,7 +50,7 @@ class PublicSpace extends Space {
  * @param array $data デフォルト値
  * @return array PublicSpaceルーム配列
  */
-	public function createRoom($data) {
+	public function createRoom($data = array()) {
 		$data = Hash::merge(array(
 			'need_approval' => true,
 			'default_participation' => true,
