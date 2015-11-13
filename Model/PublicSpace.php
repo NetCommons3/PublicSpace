@@ -29,17 +29,34 @@ class PublicSpace extends Space {
 	public $useTable = 'spaces';
 
 /**
- * DefaultParticipation
- *
- * @var bool
- */
-	public $defaultParticipation = true;
-
-/**
  * DefaultParticipationFixed
  *
  * @var bool
  */
 	public $participationFixed = true;
+
+/**
+ * Behaviors
+ *
+ * @var array
+ */
+	public $actsAs = array(
+		'PublicSpace.PublicSpace',
+	);
+
+/**
+ * PublicSpaceルームの生成
+ *
+ * @param array $data デフォルト値
+ * @return array PublicSpaceルーム配列
+ */
+	public function createRoom($data = array()) {
+		$data = Hash::merge(array(
+			'need_approval' => true,
+			'default_participation' => true,
+		), $data);
+
+		return parent::createRoom($data);
+	}
 
 }
