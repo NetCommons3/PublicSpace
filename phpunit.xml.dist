@@ -4,12 +4,12 @@
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".ctp">app/Plugin/PublicSpace</directory>
             <directory suffix=".php">app/Plugin/PublicSpace</directory>
-			<exclude>
-				<directory suffix=".php">app/Plugin/PublicSpace/Config/Migration</directory>
-				<directory suffix=".php">app/Plugin/PublicSpace/Config/Schema</directory>
-				<directory suffix=".php">app/Plugin/PublicSpace/Test/Case</directory>
-				<directory suffix=".php">app/Plugin/PublicSpace/Test/Fixture</directory>
-			</exclude>
+            <exclude>
+                <directory suffix=".php">app/Plugin/PublicSpace/Config/Migration</directory>
+                <directory suffix=".php">app/Plugin/PublicSpace/Config/Schema</directory>
+                <directory suffix=".php">app/Plugin/PublicSpace/Test/Case</directory>
+                <directory suffix=".php">app/Plugin/PublicSpace/Test/Fixture</directory>
+            </exclude>
         </whitelist>
     </filter>
     <logging>
