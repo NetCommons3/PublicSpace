@@ -26,7 +26,16 @@ class PublicSpaceComponent extends Component {
  * @return bool
  */
 	public function accessCheck(Controller $controller) {
-CakeLog::debug('PublicSpaceComponent::accessCheck');
+		if (! Current::read('User.id')) {
+			return true;
+		}
+
+		if (! $controller->Session->check('roomAccesse.' . Current::read('Room.id'))) {
+			$RolesRoomsUser = ClassRegistry::init('Rooms.RolesRoomsUser');
+			$RolesRoomsUser->saveAccessed(Current::read('RolesRoomsUser.id'));
+			$controller->Session->write('roomAccesse.' . Current::read('Room.id'), true);
+		}
+
 		return true;
 	}
 }
