@@ -36,15 +36,6 @@ class PublicSpace extends Space {
 	public $participationFixed = true;
 
 /**
- * Behaviors
- *
- * @var array
- */
-	public $actsAs = array(
-		'PublicSpace.PublicSpace',
-	);
-
-/**
  * PublicSpaceルームの生成
  *
  * @param array $data デフォルト値

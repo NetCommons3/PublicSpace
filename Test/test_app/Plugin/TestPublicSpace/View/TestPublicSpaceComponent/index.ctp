@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicSpace Behavior
+ * PublicSpaceComponentテスト用Viewファイル
  *
  * @author Noriko Arai <arai@nii.ac.jp>
  * @author Shohei Nakajima <nakajimashouhei@gmail.com>
@@ -8,15 +8,6 @@
  * @license http://www.netcommons.org/license.txt NetCommons License
  * @copyright Copyright 2014, NetCommons Project
  */
+?>
 
-App::uses('ModelBehavior', 'Model');
-
-/**
- * PublicSpace Behavior
- *
- * @author Shohei Nakajima <nakajimashouhei@gmail.com>
- * @package NetCommons\PublicSpace\Model\Behavior
- */
-class PublicSpaceBehavior extends ModelBehavior {
-
-}
+Controller/Component/TestPublicSpaceComponent/index
