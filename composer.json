@@ -17,8 +17,8 @@
         }
     },
     "require": {
-        "netcommons/net-commons":       "dev-master",
-        "netcommons/rooms":             "dev-master"
+        "netcommons/net-commons":       "@dev",
+        "netcommons/rooms":             "@dev"
     },
      "config": {
         "vendor-dir": "vendors"
