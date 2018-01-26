@@ -1,10 +1,15 @@
 {
-    "name":        "netcommons/public-space",
+    "name": "netcommons/public-space",
     "description": "Public Space Plugin for CakePHP",
-    "type":        "cakephp-plugin",
-    "keywords":    ["cakephp", "public", "space"],
-    "homepage":    "http://www.netcommons.org/",
-    "license":     "NetCommons License",
+    "type": "cakephp-plugin",
+    "keywords": [
+        "cakephp",
+        "public",
+        "space"
+    ],
+    "homepage": "http://www.netcommons.org/",
+    "license": "LicenseRef-NetCommons",
+    "license-ref-net-commons": "https://raw.githubusercontent.com/NetCommons3/NetCommons3/master/license.txt",
     "authors": [
         {
             "name": "NetCommons Community",
@@ -13,14 +18,16 @@
     ],
     "extra": {
         "installer-paths": {
-            "app/Plugin/{$name}": ["type:cakephp-plugin"]
+            "app/Plugin/{$name}": [
+                "type:cakephp-plugin"
+            ]
         }
     },
     "require": {
-        "netcommons/net-commons":       "@dev",
-        "netcommons/rooms":             "@dev"
+        "netcommons/net-commons": "@dev",
+        "netcommons/rooms": "@dev"
     },
-     "config": {
+    "config": {
         "vendor-dir": "vendors"
     }
 }
